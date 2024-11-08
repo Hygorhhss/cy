@@ -10,3 +10,10 @@ jobs:
       # and run all Cypress tests
       - name: Cypress run
         uses: cypress-io/github-action@v3
+
+      - name: Set custom output
+        id: example
+        run: echo "my_var=Hello World" >> $GITHUB_ENV
+
+      - name: Use custom output
+        run: echo "The value is ${{ env.my_var }}"

@@ -6,18 +6,17 @@ describe('Central de Atendimento ao Cliente TAT', function() {
         cy.visit('./src/index.html')
     })
 
-    it('verifica o título da aplicação', function() {
+    it.only('verifica o título da aplicação', function() {
         cy.title().should('be.equal', 'Central de Atendimento ao Cliente TAT')
     })
 
-    it('preenhce os campos obrigatorios e envia o formulário', function() {
+    it.only('preencher os campos obrigatórios e envia o formulário', function() {
         const longText = 'test, test, test, test, test, test, test, test, test, test, test, '
         cy.get('#firstName').type('Hygor')
         cy.get('#lastName').type('Henrique')
-        cy.get('#email').type('hygorhhss@outlook.com')
+        cy.get('#email').type('email_teste@outlook.com')
         cy.get('#open-text-area').type(longText, {delay:0})
         cy.contains('button', 'Enviar').click()
-
         cy.get('.success').should('be.visible')
     })
 

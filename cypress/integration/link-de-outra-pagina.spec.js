@@ -33,6 +33,7 @@ describe ('link de outra página', function(){
 
     //foi criado outra página no integration privacy.spec.js só para testar essa (criado só o it sem o describe)//
     //realizando uma visita na página - e verificando se um elemento de texot está presente e visivel//
+
     it('testa a página da politica de privacidade de forma independente', function(){
     cy.visit('./src/index.html')
     cy.get('#privacy a')
@@ -40,7 +41,5 @@ describe ('link de outra página', function(){
         .click()
         cy.contains('Talking About Testing')
         .should('be.visible')
-
-        
     })
 })

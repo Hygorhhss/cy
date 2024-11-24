@@ -6,7 +6,7 @@ describe('upload selectFile', function(){
     cy.visit('./src/index.html')
     })
 
-    it.only('seleciona um arquivo da pasta fixtures',function(){
+    it('seleciona um arquivo da pasta fixtures',function(){
         cy.get('input[type="file"]')
         .should('not.have.value')
         .selectFile('./cypress/fixtures/example.json')

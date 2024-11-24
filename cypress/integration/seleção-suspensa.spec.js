@@ -18,7 +18,7 @@ describe('Seleção suspensa', function(){
             .should('have.value', 'mentoria')
     })
 
-    it.only('Selecione um produto (blog) por seu  indice', function(){
+    it('Selecione um produto (blog) por seu  indice', function(){
         cy.get('#product')
             .select(1)
             .should('have.value', 'blog')

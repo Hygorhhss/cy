@@ -16,12 +16,12 @@ describe ('link de outra página', function(){
         .invoke('removeAttr', 'target')
     })
 
-    it.only('verifica que a politica de privacidade abre em outra aba sem a necessidade de um clique', function(){
+    it('verifica que a politica de privacidade abre em outra aba sem a necessidade de um clique', function(){
         cy.get('#privacy a')
         .should('have.attr', 'target', '_blank')
     })
 
-    it.only('acessa a poágina de politica de privacidade removendo o target e então clicando no link', function(){
+    it('acessa a poágina de politica de privacidade removendo o target e então clicando no link', function(){
     cy.get('#privacy a')    
         .invoke('removeAttr', 'target')
         .click()
@@ -33,7 +33,7 @@ describe ('link de outra página', function(){
 
     //foi criado outra página no integration privacy.spec.js só para testar essa (criado só o it sem o describe)//
     //realizando uma visita na página - e verificando se um elemento de texot está presente e visivel//
-    it.only('testa a página da politica de privacidade de forma independente', function(){
+    it('testa a página da politica de privacidade de forma independente', function(){
     cy.visit('./src/index.html')
     cy.get('#privacy a')
         .invoke('removeAttr', 'target')

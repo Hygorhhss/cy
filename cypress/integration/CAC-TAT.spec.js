@@ -6,11 +6,11 @@ describe('Central de Atendimento ao Cliente TAT', function() {
         cy.visit('./src/index.html')
     })
 
-    it.only('verifica o título da aplicação', function() {
+    it('verifica o título da aplicação', function() {
         cy.title().should('be.equal', 'Central de Atendimento ao Cliente TAT')
     })
 
-    it.only('preencher os campos obrigatórios e envia o formulário', function() {
+    it('preencher os campos obrigatórios e envia o formulário', function() {
         const longText = 'test, test, test, test, test, test, test, test, test, test, test, '
         cy.get('#firstName').type('Hygor')
         cy.get('#lastName').type('Henrique')

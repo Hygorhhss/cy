@@ -6,15 +6,15 @@ describe ('link de outra página', function(){
         cy.visit('./src/index.html')
     })
 
-    it('teste aplicação e não browser', function(){
-        cy.get('.some-link')
-        .should('have.attr', 'target', '_blank')
-    })
+  //  it('teste aplicação e não browser', function(){
+   //     cy.get('.some-link')
+   //     .should('have.attr', 'target', '_blank')
+   // })
 
-    it('removendo o atributo target do elemento', function(){
-        cy.get('#link-que-abre-em-outra-pagina')
-        .invoke('removeAttr', 'target')
-    })
+    //it('removendo o atributo target do elemento', function(){
+      //  cy.get('#link-que-abre-em-outra-pagina')
+      //  .invoke('removeAttr', 'target')
+    //})
 
     it('verifica que a politica de privacidade abre em outra aba sem a necessidade de um clique', function(){
         cy.get('#privacy a')

@@ -6,12 +6,6 @@ describe ('link de outra página', function(){
         cy.visit('./src/index.html')
     })
 
-describe ('link de dados', function(){
-    beforeEach(function(){
-        cy.visit('./src/index.html')
-    })
-})
-
   //  it('teste aplicação e não browser', function(){
    //     cy.get('.some-link')
    //     .should('have.attr', 'target', '_blank')
@@ -21,12 +15,6 @@ describe ('link de dados', function(){
       //  cy.get('#link-que-abre-em-outra-pagina')
       //  .invoke('removeAttr', 'target')
     //})
-
-
-    it('lorem', function(){
-        cy.get('#pravicy a')
-        .should('have.attr', 'target', '_blank')
-    })
 
     it('verifica que a politica de privacidade abre em outra aba sem a necessidade de um clique', function(){
         cy.get('#privacy a')

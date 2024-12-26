@@ -10,6 +10,6 @@ describe ('avançando com o cypress', function(){
         cy.get('.button')
     })
 
-    
+    //it('apenas um teste para ver se após commit/push aparece no meu desktop pessoal')//
 
 })

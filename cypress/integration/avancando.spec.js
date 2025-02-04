@@ -67,7 +67,5 @@ describe ('avançando com o cypress', function(){
             .its('body')
             .should('include', 'CAC TAT')
     })
-
-
     
     })

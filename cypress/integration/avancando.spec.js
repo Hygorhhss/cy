@@ -68,4 +68,19 @@ describe ('avançando com o cypress', function(){
             .should('include', 'CAC TAT')
     })
     
+    it.only('encontrar o gato', () => {
+
+        cy.visit('./src/index.html')
+        cy.get('span#cat')
+            .invoke('show')
+            .should('be.visible')
+        cy.get('#title')
+            .invoke('text', 'PetZone')
+        cy.get('#subtitle')
+            .invoke('text', 'Bulldogsddddd')
+        
+    })
+
+
+
     })
